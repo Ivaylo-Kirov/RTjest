@@ -24,4 +24,10 @@ test('3 plus 3 is 6', () => {
 
 test('shopping list contains water', () => {
   expect(shoppingList).toContain('water');
-})
+});
+
+test('object assignment inline', () => {
+  const data = {one: 1};
+  data['two'] = 2;
+  expect(data).toEqual({one: 1, two: 2})
+});
