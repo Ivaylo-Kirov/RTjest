@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import {sum} from './functions';
+import {sum, subtract} from './functions';
 import {shoppingList} from './objects';
 
 it('renders without crashing', () => {
@@ -13,6 +13,10 @@ it('renders without crashing', () => {
 test('sum is loaded in', () => {
   expect(sum).not.toBeNull();
 });
+
+test('subtract is loaded in', () => {
+  expect(subtract).not.toBeNull();
+})
 
 test('2 plus 2 is 4', () => {
   expect(sum(2, 2)).toBe(4);
@@ -31,3 +35,7 @@ test('object assignment inline', () => {
   data['two'] = 2;
   expect(data).toEqual({one: 1, two: 2})
 });
+
+test('20 minus 3 is 17', () => {
+  expect(subtract(20, 3)).toEqual(17);
+})
